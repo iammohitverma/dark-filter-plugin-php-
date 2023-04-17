@@ -33,8 +33,12 @@
     <!-- dark filter section -->
     <section class="dark-filter-sec">
       <div class="container">
+        <div class="heading text-center">
+          <h2>Dark Filter Plugin</h2>
+          <p>Drag your mouse to select the area for apply the filter</p>
+        </div>
         <div class="filter-area">
-          <div class="filter-image">
+          <div class="filter-image hide-inner">
             <div class="img-box image-decorators">
               <img
                 src="./assets/img/driveway.jpg"

@@ -2,7 +2,7 @@ $(document).ready(function () {
   $(".filter-area .drivewayImg").selectAreas({
     minSize: [10, 10],
     onChanged: selectAreaReady,
-    width: 800,
+    width: 700,
     areas: [
       {
         x: 10,
@@ -18,6 +18,7 @@ $(document).ready(function () {
   $("#btnReset").click(function () {
     output("reset");
     $(".filter-area .drivewayImg").selectAreas("reset");
+    $(".filter-area .drivewayImg").attr("src", "./assets/img/driveway.jpg");
   });
 
   // add new point button
@@ -51,8 +52,10 @@ $(document).ready(function () {
   }
 
   // reset onload
-  // output("reset");
-  // $(".filter-area .drivewayImg").selectAreas("reset");
+  setTimeout(() => {
+    $(".filter-area .drivewayImg").selectAreas("reset");
+    $(".filter-area .filter-image").removeClass("hide-inner");
+  }, 100);
 
   // selectAreaReady run when area box added
   function selectAreaReady(event, id, areas) {
@@ -75,6 +78,10 @@ $(document).ready(function () {
           currClickedVal
         );
       }
+      $(".filter-area .range-slider").addClass("focus");
+      setTimeout(() => {
+        $(".filter-area .range-slider").removeClass("focus");
+      }, 2000);
     });
   }
 
